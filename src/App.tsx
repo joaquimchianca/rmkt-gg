@@ -1,9 +1,20 @@
+import ThankYou from "./components/ThankYou";
+import { useAppStore } from "./store/appStore";
+
 function App() {
+  const isSubmitted = useAppStore((state) => state.isSubmitted);
+
   return (
-    <>
-     <div className="text-brand-primary text-4xl font-oxanium">Hello <span className="text-brand-accent">World!</span></div>
-    </>
-  )
+    <div className="min-h-screen bg-base-100 text-base-content font-oxanium">
+      {isSubmitted ? (
+        <ThankYou />
+      ) : (
+        <>
+        {/* todo main page  */}
+        </>
+      )}
+    </div>
+  );
 }
 
-export default App
+export default App;
