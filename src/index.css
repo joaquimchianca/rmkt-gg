@@ -1,2 +1,11 @@
 @import "tailwindcss";
-@plugin "daisyui";
+
+@plugin "daisyui" {
+  themes: dark --default;
+}
+
+@theme {
+  --font-oxanium: "Oxanium", sans-serif;
+  --color-brand-primary: #2aabf7;
+  --color-brand-accent: #E6AF2E;
+}
