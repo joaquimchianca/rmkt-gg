@@ -14,7 +14,7 @@ export const ReasonList = ({
   refs,
 }: ReasonListProps) => {
   return (
-    <div className="flex flex-col gap-96">
+    <div className="flex flex-col md:gap-96">
       {reasonsData.map((reason, index) => (
         <ReasonItem
           ref={refs[index]}

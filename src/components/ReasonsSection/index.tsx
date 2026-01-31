@@ -5,6 +5,8 @@ import { StickyCounter } from './StickyCounter';
 import { ReasonList } from './ReasonList';
 import { reasonsData } from '@/data/reasons';
 import { useWindowSize } from '@/hooks/useWindowSize';
+import { Section } from '../Section';
+import { Container } from '../Container';
 
 const DESKTOP_BREAKPOINT = 768; // Tailwind's md breakpoint
 
@@ -31,7 +33,8 @@ export const ReasonsSection = () => {
         });
       },
       {
-        rootMargin: isDesktop ? '-50% 0px -50% 0px' : '-80% 0px -20% 0px',
+        // Ajustado para disparar quando o item cruza a linha central da tela
+        rootMargin: '-45% 0px -45% 0px',
         threshold: 0,
       },
     );
@@ -49,39 +52,42 @@ export const ReasonsSection = () => {
         }
       });
     };
-  }, [refs, isDesktop]);
+  }, [refs]);
 
-  if (isDesktop) {
-    // Layout para Desktop
-    return (
-      <div className="relative grid grid-cols-2 gap-8">
-        <div className="sticky top-0 h-screen flex items-center justify-center">
-          <StickyCounter activeIndex={activeIndex} />
-        </div>
-        <div>
+  return (
+    <Section className="bg-black">
+      {isDesktop ? (
+        // Layout para Desktop
+        <Container>
+          <div className="relative grid grid-cols-4 gap-8">
+            <div className="sticky top-0 h-screen flex items-center justify-center">
+              <StickyCounter activeIndex={activeIndex} />
+            </div>
+            <div className='col-span-3'>
+              <ReasonList
+                activeIndex={activeIndex}
+                setActiveIndex={setActiveIndex}
+                refs={refs}
+              />
+            </div>
+          </div>
+        </Container>
+      ) : (
+        // Layout para Mobile - Agora usando sticky e snap scroll
+        <div className="relative">
+          {/* Contador Sticky no mobile: posicionado sem sobrepor texto */}
+          <div className="sticky top-4 left-4 z-20 pointer-events-none">
+            <div className="bg-black/40 backdrop-blur-sm rounded-full p-1 inline-block">
+              <StickyCounter activeIndex={activeIndex} />
+            </div>
+          </div>
           <ReasonList
             activeIndex={activeIndex}
             setActiveIndex={setActiveIndex}
             refs={refs}
           />
         </div>
-      </div>
-    );
-  }
-
-  // Layout para Mobile
-  return (
-    <div className="relative">
-      <div className="fixed top-8 left-4 z-10">
-        <StickyCounter activeIndex={activeIndex} />
-      </div>
-      <div>
-        <ReasonList
-          activeIndex={activeIndex}
-          setActiveIndex={setActiveIndex}
-          refs={refs}
-        />
-      </div>
-    </div>
+      )}
+    </Section>
   );
 };

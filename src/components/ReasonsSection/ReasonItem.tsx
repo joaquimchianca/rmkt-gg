@@ -15,7 +15,7 @@ export const ReasonItem = forwardRef<HTMLDivElement, ReasonItemProps>(
     return (
       <div
         ref={ref}
-        className="h-screen flex items-center justify-center"
+        className="h-screen flex flex-col items-center justify-center pt-24 md:pt-0 snap-start snap-always px-6"
         data-index={index}
       >
         <motion.div

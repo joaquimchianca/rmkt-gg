@@ -5,10 +5,10 @@ type StickyCounterProps = {
 };
 
 export const StickyCounter = ({ activeIndex }: StickyCounterProps) => {
-  const formattedIndex = String(activeIndex + 1).padStart(2, '0');
+  const formattedIndex = String(activeIndex + 1);
 
   return (
-    <div className="relative text-8xl font-bold text-neutral-content/10 h-24 w-24 flex items-center justify-center overflow-hidden">
+    <div className="relative text-4xl md:text-6xl font-bold text-neutral-content/80 h-12 md:h-24 w-12 md:w-24 flex items-center justify-center overflow-hidden">
       <AnimatePresence mode="wait">
         <motion.div
           key={activeIndex}

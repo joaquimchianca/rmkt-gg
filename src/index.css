@@ -9,3 +9,19 @@
   --color-brand-primary: #2aabf7;
   --color-brand-accent: #E6AF2E;
 }
+
+/* Custom Scrollbar */
+:root {
+  scrollbar-color: white/50 transparent;
+  scrollbar-width: thin;
+}
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background-color: white/50;
+  border-radius: 10px;
+}
