@@ -1,3 +1,4 @@
+import { HeroSection } from "./components/HeroSection";
 import ThankYou from "./components/ThankYou";
 import { useAppStore } from "./store/appStore";
 
@@ -10,7 +11,7 @@ function App() {
         <ThankYou />
       ) : (
         <>
-        {/* todo main page  */}
+          <HeroSection />
         </>
       )}
     </div>
