@@ -25,3 +25,8 @@
   background-color: white/50;
   border-radius: 10px;
 }
+
+@utility bg-grain {
+  background-image: url("https://grainy-gradients.vercel.app/noise.svg");
+  filter: contrast(170%) brightness(1000%);
+}

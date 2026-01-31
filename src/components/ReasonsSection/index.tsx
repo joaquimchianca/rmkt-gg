@@ -75,9 +75,9 @@ export const ReasonsSection = () => {
       ) : (
         // Layout para Mobile - Agora usando sticky e snap scroll
         <div className="relative">
-          {/* Contador Sticky no mobile: posicionado sem sobrepor texto */}
-          <div className="sticky top-4 left-4 z-20 pointer-events-none">
-            <div className="bg-black/40 backdrop-blur-sm rounded-full p-1 inline-block">
+          {/* Contador Sticky no mobile: aparece apenas dentro desta seção */}
+          <div className="sticky top-12 left-6 z-20 h-0">
+            <div className="bg-black/50 backdrop-blur-md rounded-full p-2 inline-block">
               <StickyCounter activeIndex={activeIndex} />
             </div>
           </div>
