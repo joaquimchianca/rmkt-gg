@@ -16,26 +16,27 @@ export const ReasonItem = forwardRef<HTMLDivElement, ReasonItemProps>(
     return (
       <div
         ref={ref}
-        className="relative h-screen flex items-center justify-center snap-start snap-always px-6 overflow-hidden"
+        className="relative h-screen flex items-center justify-center px-6 overflow-hidden"
         data-index={index}
       >
         {/* Camada de Fundo */}
         <div className="absolute inset-0 pointer-events-none select-none">
           {/* Textura Granular */}
-          <div className="absolute inset-0 bg-grain opacity-[0.03]" />
+          {/* <div className="absolute inset-0 bg-grain opacity-[0.03]" /> */}
 
           {/* Glow Dinâmico */}
-          <motion.div
+          
+        </div>
+        <motion.div
             animate={{
               opacity: isActive ? 1 : 0.3,
               scale: isActive ? 1.2 : 1,
             }}
             transition={{ duration: 1.5 }}
-            className={`absolute top-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-brand-primary/10 blur-[120px] rounded-full ${
+            className={`absolute top-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-brand-primary/15 blur-[120px] rounded-full ${
               isEven ? "-left-64" : "-right-64"
-            }`}
+            } md:-left-64 md:right-auto`}
           />
-        </div>
 
         {/* Conteúdo */}
         <motion.div

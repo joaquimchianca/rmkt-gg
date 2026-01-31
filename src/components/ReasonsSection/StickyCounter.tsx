@@ -15,7 +15,7 @@ export const StickyCounter = ({ activeIndex }: StickyCounterProps) => {
           initial={{ y: '100%' }}
           animate={{ y: '0%' }}
           exit={{ y: '-100%' }}
-          transition={{ duration: 0.2, ease: 'easeInOut' }}
+          transition={{ duration: 0.1, ease: 'easeInOut' }}
           className="absolute"
         >
           {formattedIndex}

@@ -1,4 +1,4 @@
-'use client';
+
 
 import { useState, useEffect, createRef } from 'react';
 import { StickyCounter } from './StickyCounter';
@@ -55,7 +55,8 @@ export const ReasonsSection = () => {
   }, [refs]);
 
   return (
-    <Section className="bg-black">
+    <Section className="bg-black relative">
+      <div className="absolute inset-0 bg-grain opacity-[0.05]" />
       {isDesktop ? (
         // Layout para Desktop
         <Container>
@@ -77,7 +78,7 @@ export const ReasonsSection = () => {
         <div className="relative">
           {/* Contador Sticky no mobile: aparece apenas dentro desta seção */}
           <div className="sticky top-12 left-6 z-20 h-0">
-            <div className="bg-black/50 backdrop-blur-md rounded-full p-2 inline-block">
+            <div className="p-2 inline-block">
               <StickyCounter activeIndex={activeIndex} />
             </div>
           </div>
@@ -89,5 +90,6 @@ export const ReasonsSection = () => {
         </div>
       )}
     </Section>
+
   );
 };
