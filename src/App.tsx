@@ -1,4 +1,5 @@
 import { HeroSection } from "./components/HeroSection";
+import { ReasonsSection } from "./components/ReasonsSection";
 import ThankYou from "./components/ThankYou";
 import { useAppStore } from "./store/appStore";
 
@@ -12,6 +13,7 @@ function App() {
       ) : (
         <>
           <HeroSection />
+          <ReasonsSection />
         </>
       )}
     </div>
