@@ -56,7 +56,6 @@ export const ReasonsSection = () => {
 
   return (
     <Section className="bg-black relative">
-      <div className="absolute inset-0 bg-grain opacity-[0.05]" />
       {isDesktop ? (
         // Layout para Desktop
         <Container>

@@ -4,7 +4,7 @@ import { Section } from "./Section";
 export const HeroSection = () => {
   return (
     <Section className="relative text-white text-center bg-[url('/rmkt-hero-bg.webp')] bg-cover bg-top snap-start">
-      <div className="absolute inset-0 bg-black/70 md:bg-black/60" />
+      <div className="absolute inset-0 bg-black/60" />
       <div className="absolute bottom-0 left-0 right-0 h-2/3 md:h-1/2 bg-linear-to-t from-black to-transparent" />
       <Container className="relative">
         <div className="max-w-3xl md:max-w-4xl mx-auto">

@@ -33,15 +33,7 @@ export const ReasonItem = forwardRef<HTMLDivElement, ReasonItemProps>(
         />
 
         {/* Conteúdo */}
-        <motion.div
-          className="relative z-10 text-center max-w-2xl"
-          initial={{ opacity: 0.3, y: 20 }}
-          animate={{
-            opacity: isActive ? 1 : 0.3,
-            y: isActive ? 0 : 20,
-          }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-        >
+        <div className="relative z-10 text-center max-w-2xl">
           <h3 className="text-3xl md:text-4xl font-bold tracking-tighter text-white">
             {title}
           </h3>
@@ -56,13 +48,13 @@ export const ReasonItem = forwardRef<HTMLDivElement, ReasonItemProps>(
                   <img
                     src={src}
                     alt={`${title} - Imagem ${i + 1}`}
-                    className="h-[700px] w-auto rounded-xl shadow-2xl border border-white/10 object-contain transition-transform duration-300 group-hover:scale-105"
+                    className="h-[700px] w-auto rounded-xl shadow-2xl border border-white/10 object-contain"
                   />
                 </div>
               ))}
             </div>
           )}
-        </motion.div>
+        </div>
       </div>
     );
   },
