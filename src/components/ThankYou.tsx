@@ -25,16 +25,16 @@ const ThankYou = () => {
               return (
                 <div className="relative w-full">
                   <div
-                    className="absolute bottom-full mb-3 px-3 py-1 bg-primary/70 text-white text-xs font-bold rounded-md transform -translate-x-1/2 flex flex-col items-center"
+                    className="absolute bottom-full mb-3 px-3 py-1 bg-brand-primary/70 text-white text-xs font-bold rounded-md transform -translate-x-1/2 flex flex-col items-center"
                     style={{ left: `${percentage}%` }}
                   >
                     {percentage}%
-                    <div className="absolute top-full w-0 h-0 border-l-[6px] border-l-transparent border-r-[6px] border-r-transparent border-t-[6px] border-t-primary/70"></div>
+                    <div className="absolute top-full w-0 h-0 border-l-[6px] border-l-transparent border-r-[6px] border-r-transparent border-t-[6px] border-t-brand-primary/70"></div>
                   </div>
 
                   <div className="w-full h-2.5 bg-white/10 rounded-full overflow-hidden">
                     <div
-                      className="h-full bg-primary transition-all duration-1000 ease-out"
+                      className="h-full bg-brand-primary transition-all duration-1000 ease-out"
                       style={{ width: `${percentage}%` }}
                     ></div>
                   </div>
@@ -50,13 +50,13 @@ const ThankYou = () => {
           </span>{" "}
           — é lá dentro que o GG vai:
         </p>
-        <ul className="text-left mb-6 space-y-2">
+        <ul className="text-left mb-6 space-y-2 ml-4">
           <li className="flex items-center">
-            <span className="text-primary mr-3 font-bold text-xl">→</span>
+            <span className="text-brand-primary mr-3 font-bold text-xl">→</span>
             <span>Liberar os bastidores secretos da IA</span>
           </li>
           <li className="flex items-center">
-            <span className="text-primary mr-3 font-bold text-xl">→</span>
+            <span className="text-brand-primary mr-3 font-bold text-xl">→</span>
             <span>Enviar o link da transmissão ao vivo</span>
           </li>
         </ul>
@@ -68,7 +68,7 @@ const ThankYou = () => {
           rel="noopener noreferrer"
         >
           <button
-            className="w-full mt-2 font-bold py-4 rounded-full transition-all transform text-lg text-black bg-accent hover:scale-[1.02] shadow-[0_0_25px_rgba(230,175,46,0.4)] cursor-pointer flex items-center justify-center"
+            className="w-full mt-2 font-bold py-4 rounded-full transition-all transform text-lg text-black bg-brand-accent hover:scale-[1.02] shadow-[0_0_25px_rgba(230,175,46,0.4)] cursor-pointer flex items-center justify-center"
           >
             <WhatsappIcon />
             <span className="ml-2">ENTRAR PARA O GRUPO OFICIAL</span>
