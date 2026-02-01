@@ -29,4 +29,33 @@
 @utility bg-grain {
   background-image: url("https://grainy-gradients.vercel.app/noise.svg");
   filter: contrast(170%) brightness(1000%);
+  /* Otimização para o grão não travar o scroll */
+  will-change: transform;
+  transform: translateZ(0);
+}
+
+/* Otimizações Globais de Performance */
+@layer base {
+  /* Melhora a suavidade das fontes e renderização geral */
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth;
+  }
+
+  /* Força aceleração de hardware (GPU) em elementos que possuem animações ou efeitos pesados */
+  .motion-safe, 
+  [class*="animate-"], 
+  [class*="transition-"],
+  [class*="blur-"] {
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+    will-change: transform, opacity, filter;
+  }
+
+  /* Evita que o navegador tente renderizar coisas fora da tela de forma pesada */
+  img {
+    content-visibility: auto;
+  }
 }
