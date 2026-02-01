@@ -34,7 +34,7 @@ export const ReasonsSection = () => {
       },
       {
         // Ajustado para disparar quando o item cruza a linha central da tela
-        rootMargin: '-10% 0px -85% 0px',
+        rootMargin: '-10% 0px -75% 0px',
         threshold: 0,
       },
     );
