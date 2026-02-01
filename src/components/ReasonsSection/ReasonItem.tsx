@@ -27,7 +27,7 @@ export const ReasonItem = forwardRef<HTMLDivElement, ReasonItemProps>(
             scale: isActive ? 1.2 : 1,
           }}
           transition={{ duration: 1.5 }}
-          className={`absolute top-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-brand-primary/30 md:bg-brand-primary/15 blur-[120px] rounded-full ${
+          className={`absolute top-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-brand-primary/40 md:bg-brand-primary/15 blur-[120px] rounded-full ${
             isEven ? "-left-64" : "-right-64"
           } md:-left-64 md:right-auto`}
         />
