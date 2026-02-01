@@ -16,7 +16,7 @@ export const ReasonItem = forwardRef<HTMLDivElement, ReasonItemProps>(
     return (
       <div
         ref={ref}
-        className="relative min-h-screen py-20 flex items-center justify-center px-6 overflow-hidden"
+        className="relative min-h-screen py-16 flex items-center justify-center px-6 overflow-hidden"
         data-index={index}
       >
         {/* Camada de Fundo */}
