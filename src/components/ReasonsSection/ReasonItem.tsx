@@ -16,7 +16,7 @@ export const ReasonItem = forwardRef<HTMLDivElement, ReasonItemProps>(
     return (
       <div
         ref={ref}
-        className="relative h-screen flex items-center justify-center px-6 overflow-hidden"
+        className="relative min-h-screen py-20 flex items-center justify-center px-6 overflow-hidden"
         data-index={index}
       >
         {/* Camada de Fundo */}
@@ -56,14 +56,15 @@ export const ReasonItem = forwardRef<HTMLDivElement, ReasonItemProps>(
           </p>
 
           {images && images.length > 0 && (
-            <div className="mt-10 flex flex-wrap justify-center gap-6">
+            <div className="mt-10 flex flex-wrap justify-center gap-4 md:gap-6">
               {images.map((src, i) => (
-                <img
-                  key={i}
-                  src={src}
-                  alt={`${title} - Imagem ${i + 1}`}
-                  className="max-w-sm rounded-xl shadow-2xl border border-white/10"
-                />
+                <div key={i} className="relative group">
+                  <img
+                    src={src}
+                    alt={`${title} - Imagem ${i + 1}`}
+                    className="h-[700px] w-auto rounded-xl shadow-2xl border border-white/10 object-contain transition-transform duration-300 group-hover:scale-105"
+                  />
+                </div>
               ))}
             </div>
           )}

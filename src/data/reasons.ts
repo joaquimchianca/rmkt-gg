@@ -24,7 +24,9 @@ export const reasonsData: Reason[] = [
     title: 'Resultado sério aparece em número. Não em frase bonita.',
     description:
       'Sem marketing. Sem fantasia. curva de capital, drawdown, período operado, comportamento em mercado ruim. Resultado profissional sobrevive ao tédio.',
-    images: ['https://placehold.co/600x400/171717/E6AF2E?text=Exemplo+Dashboard'],
+    images: [
+      '/resultados/resultado-extrato.jpeg',
+    ],
   },
   {
     title: 'O Algoritmo GG não vende sonho. Ele impõe limite.',
@@ -45,8 +47,9 @@ export const reasonsData: Reason[] = [
     title: 'Profissionalismo não é ganhar sempre.',
     description: 'É saber: quando não operar, quando reduzir risco, quando aceitar prejuízo.',
     images: [
-      'https://placehold.co/600x400/171717/E6AF2E?text=Exemplo+Depoimento+1',
-      'https://placehold.co/600x400/171717/E6AF2E?text=Exemplo+Depoimento+2',
+      '/depoimentos/depoimento-1.jpeg',
+      '/depoimentos/depoimento-2.jpeg',
+      '/depoimentos/depoimento-3.jpeg',
     ],
   },
   {
