@@ -57,17 +57,17 @@ export const Form: React.FC<FormProps> = () => {
     const stateClasses =
       showErrors && !isValid
         ? "border-red-500/50 bg-red-500/10"
-        : "border-white/10 focus:border-primary/50 focus:ring-1 focus:ring-primary/50";
+        : "border-white/10 focus:border-brand-primary/50 focus:ring-1 focus:ring-brand-primary/50";
     return `${baseClasses} ${stateClasses}`;
   };
 
   return (
     <div className="relative group">
       {/* Primary Glow Effect */}
-      <div className="absolute -inset-6 bg-primary/50 blur-[40px] md:blur-[80px] lg:blur-[100px] opacity-80 md:opacity-70 pointer-events-none gpu-glow transform-gpu will-change-transform"></div>
+      <div className="absolute -inset-6 bg-brand-primary/50 blur-[40px] md:blur-[80px] lg:blur-[100px] opacity-80 md:opacity-70 pointer-events-none gpu-glow transform-gpu will-change-transform"></div>
 
       {/* Glassmorphism Container */}
-      <div className="relative border border-primary/40 hover:border-primary/60 transition-colors rounded-2xl p-6 shadow-2xl backdrop-blur-2xl bg-white/5">
+      <div className="relative border border-brand-primary/40 hover:border-brand-primary/60 transition-colors rounded-2xl p-6 shadow-2xl backdrop-blur-2xl bg-white/5">
         <p className="text-sm md:text-base mb-4 text-gray-100">
           Preencha os campos abaixo para garantir seu acesso:
         </p>
@@ -126,7 +126,7 @@ export const Form: React.FC<FormProps> = () => {
             className={`w-full mt-2 font-bold py-4 rounded-full transition-all transform text-lg text-black gpu-glow transform-gpu
               ${
                 !isLoading
-                  ? "bg-accent hover:scale-[1.02] shadow-[0_0_25px_rgba(230,175,46,0.4)] cursor-pointer"
+                  ? "bg-brand-accent hover:scale-[1.02] shadow-[0_0_25px_rgba(230,175,46,0.4)] cursor-pointer"
                   : "bg-gray-600 cursor-not-allowed opacity-50 grayscale"
               }`}
           >

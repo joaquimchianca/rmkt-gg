@@ -1,3 +1,4 @@
+import Footer from "./components/Footer";
 import { HeroSection } from "./components/HeroSection";
 import { ReasonsSection } from "./components/ReasonsSection";
 import ThankYou from "./components/ThankYou";
@@ -14,6 +15,7 @@ function App() {
         <>
           <HeroSection />
           <ReasonsSection />
+          <Footer />
         </>
       )}
     </div>

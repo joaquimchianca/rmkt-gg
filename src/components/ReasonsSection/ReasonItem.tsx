@@ -1,6 +1,6 @@
-import { forwardRef } from 'react';
-import { motion } from 'framer-motion';
-import type { Reason } from '@/data/reasons';
+import { forwardRef } from "react";
+import { motion } from "framer-motion";
+import type { Reason } from "@/data/reasons";
 
 type ReasonItemProps = Reason & {
   index: number;
@@ -16,27 +16,21 @@ export const ReasonItem = forwardRef<HTMLDivElement, ReasonItemProps>(
     return (
       <div
         ref={ref}
-        className="relative min-h-screen py-16 flex items-center justify-center px-6 overflow-hidden"
+        className="relative min-h-screen flex items-center justify-center px-6 overflow-hidden"
         data-index={index}
       >
         {/* Camada de Fundo */}
-        <div className="absolute inset-0 pointer-events-none select-none">
-          {/* Textura Granular */}
-          {/* <div className="absolute inset-0 bg-grain opacity-[0.03]" /> */}
-
-          {/* Glow Dinâmico */}
-          
-        </div>
+        <div className="absolute inset-0 pointer-events-none select-none"></div>
         <motion.div
-            animate={{
-              opacity: isActive ? 1 : 0.3,
-              scale: isActive ? 1.2 : 1,
-            }}
-            transition={{ duration: 1.5 }}
-            className={`absolute top-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-brand-primary/15 blur-[120px] rounded-full ${
-              isEven ? "-left-64" : "-right-64"
-            } md:-left-64 md:right-auto`}
-          />
+          animate={{
+            opacity: isActive ? 1 : 0.3,
+            scale: isActive ? 1.2 : 1,
+          }}
+          transition={{ duration: 1.5 }}
+          className={`absolute top-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-brand-primary/15 blur-[120px] rounded-full ${
+            isEven ? "-left-64" : "-right-64"
+          } md:-left-64 md:right-auto`}
+        />
 
         {/* Conteúdo */}
         <motion.div
@@ -74,4 +68,4 @@ export const ReasonItem = forwardRef<HTMLDivElement, ReasonItemProps>(
   },
 );
 
-ReasonItem.displayName = 'ReasonItem';
+ReasonItem.displayName = "ReasonItem";
