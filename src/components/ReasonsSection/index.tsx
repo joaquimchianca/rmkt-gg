@@ -59,6 +59,7 @@ export const ReasonsSection = () => {
       {isDesktop ? (
         // Layout para Desktop
         <Container>
+          <h2 className='text-center py-8 text-6xl'>Entenda por que você não pode ficar de fora da nossa conversa</h2>
           <div className="relative grid grid-cols-4 gap-8">
             <div className="sticky top-0 h-screen flex items-center justify-center">
               <StickyCounter activeIndex={activeIndex} />
@@ -75,8 +76,9 @@ export const ReasonsSection = () => {
       ) : (
         // Layout para Mobile - Agora usando sticky e snap scroll
         <div className="relative">
+          <h2 className='text-center my-8 text-2xl'>Entenda por que você não pode ficar de fora da nossa conversa</h2>
           {/* Contador Sticky no mobile: aparece apenas dentro desta seção */}
-          <div className="sticky top-12 left-6 z-20 h-0">
+          <div className="sticky top-6 left-6 z-20 h-0">
             <div className="p-2 inline-block">
               <StickyCounter activeIndex={activeIndex} />
             </div>
